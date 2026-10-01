@@ -1,36 +1,39 @@
-const businessName = 'Super HVAC'
-const tagline = '24/7 Emergency AC & Heating Repair'
+// Air Wizards Heating and Cooling: demo config
+// Lines marked CONFIRM are placeholders. Check them with the owner on the call.
+
+const businessName = 'Air Wizards Heating and Cooling'
+const tagline = 'Let us work our magic'
 const city = 'Las Vegas'
 const emergencyPhone = {
-  raw: '+17025550142',
-  display: '(702) 555-0142',
+  raw: '+17023037810',
+  display: '(702) 303-7810',
 } as const
 
 export const siteConfig = {
   businessName,
   tagline,
-  legalName: 'Super HVAC LLC',
+  legalName: 'Air Wizards Heating and Cooling LLC',
 
   phone: {
-    raw: '+17025550142',
-    display: '(702) 555-0142',
+    raw: '+17023037810',
+    display: '(702) 303-7810',
   },
   emergencyPhone,
-  email: 'dispatch@superhvac.com',
+  email: '', // CONFIRM: not on file
 
-  address: '4120 W Sunset Rd, Suite 12',
+  address: '4012 S Rainbow Blvd, Ste K-623',
   city,
   state: 'NV',
-  zip: '89118',
+  zip: '89103',
 
-  licenseNumber: '0089421',
-  yearsInBusiness: 18,
-  yearFounded: 2008,
+  licenseNumber: '0074574',
+  yearsInBusiness: 0, // CONFIRM
+  yearFounded: 0, // CONFIRM
 
   hours: {
-    weekday: 'Mon–Sat, 7a–7p',
-    weekend: '7 days a week',
-    emergency: '24 / 7 / 365',
+    weekday: 'Mon–Sat, 7a–7p', // CONFIRM
+    weekend: '7 days a week', // CONFIRM
+    emergency: '24 / 7 / 365', // CONFIRM
   },
 
   serviceAreas: [
@@ -38,43 +41,41 @@ export const siteConfig = {
     'Henderson',
     'North Las Vegas',
     'Summerlin',
+    'Spring Valley',
     'Enterprise',
     'Paradise',
-    'Spring Valley',
-    'Green Valley',
-    'Boulder City',
   ],
 
   services: [
     {
-      name: 'Emergency AC repair',
+      name: 'AC repair',
       description:
-        'Round-the-clock diagnosis and repair. Capacitors, contactors, blower motors, and coils on the truck.',
+        'Fast diagnosis and repair for systems that quit when Vegas heat hits hardest.',
     },
     {
       name: 'System replacement',
       description:
-        'Right-sized load calculation, permit handling, and same-week installs on high-SEER2 equipment.',
+        'Properly sized, efficient equipment installed cleanly, with permits handled.',
     },
     {
       name: 'Tune-ups & maintenance',
       description:
-        '21-point seasonal service that catches the failures before a 110-degree Saturday does.',
+        'Seasonal service that catches small problems before they become breakdowns.',
     },
     {
       name: 'Ductwork & airflow',
       description:
-        'Leak testing, sealing, and balancing so the back bedroom stops running eight degrees warmer.',
+        'Leak sealing and balancing so every room actually cools.',
     },
     {
       name: 'Indoor air quality',
       description:
-        'Media filtration, UV coils, and whole-home dehumidification for dust and monsoon season.',
+        'Filtration and purification for dust, allergens, and monsoon season.',
     },
     {
       name: 'Heating & furnaces',
       description:
-        'Gas furnace, heat pump, and rooftop package repair for the six weeks Vegas gets cold.',
+        'Furnace and heat pump repair for the weeks Vegas gets cold.',
     },
   ],
 
@@ -86,13 +87,13 @@ export const siteConfig = {
     yelp: '',
   },
 
-  reviewCount: 1842,
-  averageRating: 4.9,
+  // No Google rating on file for this business, so these stay at 0
+  // rather than showing made-up review numbers.
+  reviewCount: 0,
+  averageRating: 0,
 
-  primaryCTA: 'Call 24/7',
+  primaryCTA: 'Call Now',
 
-  // If the logo file is missing, the header and footer fall back to a
-  // businessName wordmark in the primary color.
   logo: {
     src: '/logo.png',
     alt: `${businessName} logo`,
@@ -100,25 +101,24 @@ export const siteConfig = {
   },
   favicon: '/favicon.png',
   formEndpoint: 'https://formspree.io/f/mwlpjaye',
-  siteUrl: 'https://goldin-hvac1.pages.dev',
+  siteUrl: 'https://demo2.websitesbygoldin.com',
 
-  // Every shade on the site (hovers, tints, borders, dark mode) is derived
-  // from these values, so editing a hex here recolors the whole site.
+  // Pulled from the Air Wizards logo: royal blue, wizard red, deep indigo.
   colors: {
-    primary: '#0b5fd0',
-    primaryDark: '#094ba5',
-    secondary: '#0b1b2b',
-    accent: '#c2410c',
-    background: '#f8fafc',
+    primary: '#1a1fc4',
+    primaryDark: '#12158f',
+    secondary: '#14123a',
+    accent: '#d02f3c',
+    background: '#f8f9fc',
     surface: '#ffffff',
-    textPrimary: '#0d1b2a',
-    textMuted: '#536377',
+    textPrimary: '#14123a',
+    textMuted: '#5a5873',
   },
 
   seo: {
-    title: `${businessName} — ${tagline} in ${city}`,
-    description: `${businessName} dispatches licensed technicians across ${city} and Henderson 24/7. Average 47-minute arrival, flat-rate pricing, no overtime fees. Call ${emergencyPhone.display}.`,
-    ogDescription: `Licensed, EPA-certified technicians on call around the clock. Average 47-minute arrival across the ${city} valley.`,
+    title: `${businessName} | AC & Heating Repair in ${city}`,
+    description: `${businessName} provides licensed AC repair, installation, and heating service across ${city} and Henderson. NV license 0074574. Call ${emergencyPhone.display}.`,
+    ogDescription: `Licensed heating and cooling service across the ${city} valley. Call ${emergencyPhone.display}.`,
     ogImage: '/assets/hero-tools.jpg',
   },
 } as const
